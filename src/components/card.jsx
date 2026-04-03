@@ -1,9 +1,14 @@
-const Card = () => {
+import {Bookmark} from 'lucide-react'
+const Card = (Cname) => {
   return (
     <div className="card">
-        <h1>I am Adi!!</h1>
-        <h2>I am Learning React!!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ullam ad doloribus ex assumenda totam tempore, repellendus dignissimos maiores ducimus quis voluptatem qui cupiditate, voluptate aperiam obcaecati dicta reprehenderit delectus?</p>
+      <div className="top">
+         <img src={Cname.img}/>
+         <button>Save<Bookmark /></button>
+         {Cname.name}
+         <h4>{Cname.role}</h4>
+      </div>
+       <button>Apply</button>
     </div>
   )
 }
